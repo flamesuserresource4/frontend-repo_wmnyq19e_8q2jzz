@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { MessageSquare, Send, Bot, User } from 'lucide-react';
 
 const initialMessages = [
-  { role: 'assistant', content: 'Hi! I\'m your AI copilot. Describe what you want to build, and I\'ll outline the steps.' },
-  { role: 'user', content: 'Create a landing page with a 3D brain hero and feature grid.' },
-  { role: 'assistant', content: 'Great! I\'ll set up a hero with a 3D scene, then add features, a demo, and a call-to-action.' }
+  { role: 'assistant', content: "Hey, I'm Jarvis. What do you want to create today?" },
+  { role: 'user', content: 'Can you scaffold a dashboard and add dark mode?' },
+  { role: 'assistant', content: 'Absolutely. I will set up a layout, theme switch, and plug in a components library.' }
 ];
 
 const Demo = () => {
@@ -17,11 +17,10 @@ const Demo = () => {
     if (!trimmed) return;
 
     const newMsgs = [...messages, { role: 'user', content: trimmed }];
-    // Mock assistant reply
     const reply = {
       role: 'assistant',
       content:
-        'Acknowledged. I\'d break this into small tasks and ship iteratively. You can connect me to a backend for full functionality.'
+        "Got it. I'd break this into steps and iterate. Connect a backend later for real-time AI responses and memory."
     };
     setMessages([...newMsgs, reply]);
     setInput('');
@@ -35,8 +34,8 @@ const Demo = () => {
             <MessageSquare className="h-5 w-5" />
           </div>
           <div>
-            <h2 className="text-2xl font-semibold sm:text-3xl">Try a quick chat</h2>
-            <p className="text-sm text-white/70">This is a local demo for feel only. Connect your backend to enable real conversations.</p>
+            <h2 className="text-2xl font-semibold sm:text-3xl">Talk to Jarvis</h2>
+            <p className="text-sm text-white/70">This chat is a local demo. We can wire it to a backend for full capability.</p>
           </div>
         </div>
 
@@ -59,7 +58,7 @@ const Demo = () => {
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask for an app, a feature, or a change..."
+              placeholder="Ask me to code, edit images, or cut a video clip..."
               className="flex-1 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white/20"
             />
             <button

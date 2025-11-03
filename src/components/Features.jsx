@@ -1,26 +1,46 @@
 import React from 'react';
-import { Brain, Zap, Shield, Workflow } from 'lucide-react';
+import { Code2, Wand2, Image as ImageIcon, Video, FileText, Zap, Shield, Workflow } from 'lucide-react';
 
 const features = [
   {
-    icon: Brain,
-    title: 'Understands Context',
-    desc: 'Keeps track of goals and constraints to deliver relevant results.'
+    icon: Code2,
+    title: 'Coding Assistant',
+    desc: 'Explain, refactor, and generate code with context-aware suggestions.'
+  },
+  {
+    icon: Wand2,
+    title: 'Prompt Studio',
+    desc: 'Design, test, and version powerful prompts with reusable templates.'
+  },
+  {
+    icon: ImageIcon,
+    title: 'Image Editor',
+    desc: 'Upscale, remove background, and apply smart edits in seconds.'
+  },
+  {
+    icon: Video,
+    title: 'Video Tools',
+    desc: 'Auto-captions, cuts, and social-ready clips with AI assistance.'
+  },
+  {
+    icon: FileText,
+    title: 'Document Insights',
+    desc: 'Summarize, extract key points, and ask questions about long files.'
   },
   {
     icon: Workflow,
-    title: 'Builds End-to-End',
-    desc: 'From APIs to UI, generate and connect the pieces that matter.'
+    title: 'Automations',
+    desc: 'Chain tasks into workflows to ship ideas end-to-end.'
   },
   {
     icon: Zap,
-    title: 'Fast Iteration',
-    desc: 'Refine ideas in seconds with quick, incremental updates.'
+    title: 'Real-time Speed',
+    desc: 'Snappy interactions and fast iterations keep you in flow.'
   },
   {
     icon: Shield,
-    title: 'Privacy First',
-    desc: 'Your data stays protected with robust guardrails and controls.'
+    title: 'Secure & Private',
+    desc: 'Granular controls help keep your data protected.'
   }
 ];
 
@@ -29,9 +49,9 @@ const Features = () => {
     <section id="features" className="relative w-full bg-black py-20 text-white">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold sm:text-4xl">Why this AI stands out</h2>
+          <h2 className="text-3xl font-semibold sm:text-4xl">All the tools you expect from Jarvis</h2>
           <p className="mt-3 text-white/70">
-            Designed for creators, developers, and teams who want to move from idea to impact.
+            Build, edit, and automate across code, media, and documents from one cohesive hub.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
