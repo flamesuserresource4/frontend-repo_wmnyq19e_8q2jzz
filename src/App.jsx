@@ -4,38 +4,37 @@ import Features from './components/Features';
 import Demo from './components/Demo';
 import Footer from './components/Footer';
 
-function App() {
+const App = () => {
   return (
     <div className="min-h-screen w-full bg-black text-white">
-      {/* Top navigation */}
-      <header className="sticky top-0 z-20 w-full border-b border-white/10 bg-black/60 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-3">
-            <div className="h-6 w-6 rounded-sm bg-white" />
-            <span className="text-sm font-medium text-white/90">Jarvis</span>
-          </div>
-          <nav className="hidden items-center gap-6 text-sm text-white/70 sm:flex">
-            <a href="#features" className="hover:text-white">Tools</a>
-            <a href="#demo" className="hover:text-white">Chat</a>
-            <a href="#cta" className="hover:text-white">Get started</a>
+      {/* Top bar */}
+      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/70 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+          <a href="#" className="text-lg font-semibold tracking-tight">Jarvis</a>
+          <nav className="hidden items-center gap-6 text-sm text-white/80 sm:flex">
+            <a href="#tools" className="hover:text-white">Tools</a>
+            <a href="#chat" className="hover:text-white">Chat</a>
+            <a href="#get-started" className="rounded-md bg-white/10 px-3 py-1.5 text-white hover:bg-white/20">Get started</a>
           </nav>
-          <a href="#demo" className="rounded-full bg-white px-4 py-2 text-xs font-medium text-black hover:bg-white/90">Open Jarvis</a>
         </div>
       </header>
 
+      {/* Sections */}
       <main>
         <Hero />
         <Features />
         <Demo />
-        <section id="cta" className="w-full bg-gradient-to-b from-zinc-900 to-black py-20">
+
+        {/* Simple CTA */}
+        <section id="get-started" className="w-full bg-gradient-to-b from-black to-black py-20">
           <div className="mx-auto max-w-4xl px-6 text-center">
-            <h3 className="text-2xl font-semibold sm:text-3xl">Build and create with Jarvis</h3>
-            <p className="mt-3 text-white/70">
-              Ready to connect real AI and persistence? We can plug into an API and database next.
+            <h3 className="text-2xl font-semibold sm:text-3xl">Build with Jarvis today</h3>
+            <p className="mx-auto mt-3 max-w-2xl text-white/70">
+              Ship faster with an integrated AI studio for code, content, media, and automation — all in one place.
             </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-              <a href="#demo" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:bg-white/90">Launch chat</a>
-              <a href="#features" className="rounded-full border border-white/20 bg-white/5 px-5 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Explore tools</a>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <a href="#chat" className="rounded-md bg-cyan-500 px-5 py-3 text-sm font-medium text-black transition hover:bg-cyan-400">Open chat</a>
+              <a href="#tools" className="rounded-md border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10">Explore tools</a>
             </div>
           </div>
         </section>
@@ -44,6 +43,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
